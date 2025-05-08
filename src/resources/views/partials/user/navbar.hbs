@@ -8,7 +8,7 @@
         <li class="active"><a href="/home">Trang chủ</a></li>
         <li><a href="/gioithieu">Giới thiệu</a></li>
 
-        <li >
+        {{!-- <li >
           <div class="dropdown">
             <style>
               .btn-navbar-dichvu{
@@ -37,8 +37,8 @@
               <li><a class="dropdown-item" href="#">Tiêm chủng VIP</a></li>
             </ul>
           </div>
-        </li>
-        <li><a href="#">Bác sĩ</a></li>
+        </li> --}}
+        <li><a href="#" onclick="handleBookVaccine()">Đặt lịch tiêm chủng</a></li>
         <li><a href="/goivacxin">Gói vắc xin</a></li>
         <li><a href="/banggia">Bảng giá</a></li>
         <li><a href="/tintuc">Tin tức</a></li>
@@ -49,6 +49,7 @@
   </div>
   <!-- /container -->
 </nav>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     // Lấy danh sách các mục menu
@@ -71,4 +72,26 @@
       }
     });
   });
+
+  function handleBookVaccine() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      if (isLoggedIn) {
+        window.location.href = '/datlichvacxin';
+      } else {
+        Swal.fire({
+          title: 'Yêu cầu đăng nhập',
+          text: 'Vui lòng đăng nhập để đặt lịch tiêm chủng!',
+          icon: 'warning',
+          confirmButtonText: 'OK',
+          showCancelButton: true,
+          cancelButtonText: 'Hủy',
+          confirmButtonColor: '#e63946',
+          cancelButtonColor: '#6c757d'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = '/xacthucdanhtinh';
+          }
+        });
+      }
+    }
 </script>

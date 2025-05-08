@@ -1,0 +1,355 @@
+/* Header Section */
+.header-section {
+  padding: 60px 0;
+  background: #ffffff;
+  border-bottom: 2px solid #e63946;
+  text-align: center; }
+
+.header-section h1 {
+  color: #D10024;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem; }
+
+.header-section p {
+  font-size: 1.2rem;
+  color: #1d1d1d;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.header-section .btn-primary {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #e63946, #1d1d1d);
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease; }
+
+.header-section .btn-primary:hover {
+  background: linear-gradient(90deg, #f94144, #2b2b2b);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4); }
+
+/* Price Table Section */
+.price-section {
+  padding: 40px 0; }
+
+.price-section h2 {
+  color: #D10024;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem; }
+
+.price-section .filter-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; }
+
+.price-section .filter-group select {
+  width: 200px;
+  padding: 0.8rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin: 0.5rem;
+  transition: all 0.3s ease; }
+
+.price-section .filter-group select:focus {
+  border-color: #e63946;
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+  outline: none; }
+
+.price-section .table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #1d1d1d;
+  background: #ffffff;
+  border: 1px solid #e63946;
+  border-radius: 8px;
+  overflow: hidden; }
+
+.price-section .table th,
+.price-section .table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border: 1px solid #dee2e6;
+  font-size: 0.95rem;
+  text-align: center; }
+
+.price-section .table th {
+  background: #e63946;
+  color: #ffffff;
+  font-weight: 600; }
+
+.price-section .table tbody tr {
+  transition: background 0.3s ease; }
+
+.price-section .table tbody tr:hover {
+  background: #f8f9fa; }
+
+.price-section .table .btn-primary {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #e63946, #1d1d1d);
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease; }
+
+.price-section .table .btn-primary:hover {
+  background: linear-gradient(90deg, #f94144, #2b2b2b);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4); }
+
+/* Services Section */
+.services-section {
+  padding: 40px 0;
+  background: #f8f9fa; }
+
+.services-section h2 {
+  color: #D10024;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem; }
+
+.services-section .service-card {
+  background: #ffffff;
+  border: 1px solid #e63946;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; }
+
+.services-section .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3); }
+
+.services-section .service-card h3 {
+  color: #1d1d1d;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem; }
+
+.services-section .service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem; }
+
+.services-section .service-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  text-align: left; }
+
+.services-section .service-card ul li {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem; }
+
+.services-section .service-card ul li::before {
+  content: '\f058';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #e63946;
+  position: absolute;
+  left: 0;
+  top: 0.2rem; }
+
+.services-section .service-card .btn-primary {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #e63946, #1d1d1d);
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease; }
+
+.services-section .service-card .btn-primary:hover {
+  background: linear-gradient(90deg, #f94144, #2b2b2b);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4); }
+
+/* Payment Section */
+.payment-section {
+  padding: 40px 0; }
+
+.payment-section h2 {
+  color: #D10024;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem; }
+
+.payment-section .table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #1d1d1d;
+  background: #ffffff;
+  border: 1px solid #e63946;
+  border-radius: 8px;
+  overflow: hidden; }
+
+.payment-section .table th,
+.payment-section .table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border: 1px solid #dee2e6;
+  font-size: 0.95rem;
+  text-align: center; }
+
+.payment-section .table th {
+  background: #e63946;
+  color: #ffffff;
+  font-weight: 600; }
+
+.payment-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  text-align: left; }
+
+.payment-section ul li {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem; }
+
+.payment-section ul li::before {
+  content: '\f058';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #e63946;
+  position: absolute;
+  left: 0;
+  top: 0.2rem; }
+
+/* Contact Section */
+.contact-section {
+  padding: 40px 0;
+  background: #e63946;
+  text-align: center;
+  color: #ffffff; }
+
+.contact-section h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 1rem; }
+
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem; }
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem; }
+
+.contact-section ul li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem; }
+
+.contact-section ul li i {
+  margin-right: 0.5rem; }
+
+.contact-section .btn-primary {
+  background: #ffffff;
+  color: #1d1d1d;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease; }
+
+.contact-section .btn-primary:hover {
+  background: #f8f9fa;
+  color: #e63946;
+  transform: scale(1.05); }
+
+/* Share Section */
+.share-section {
+  padding: 20px 0;
+  text-align: center; }
+
+.share-section p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem; }
+
+.share-section .share-icon {
+  font-size: 1.5rem;
+  color: #e63946;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease; }
+
+.share-section .share-icon:hover {
+  color: #f94144; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-section {
+    padding: 30px 0; }
+  .header-section h1 {
+    font-size: 2rem; }
+  .header-section p {
+    font-size: 1rem; }
+  .price-section,
+  .services-section,
+  .payment-section,
+  .contact-section {
+    padding: 20px 0; }
+  .price-section h2,
+  .services-section h2,
+  .payment-section h2,
+  .contact-section h2 {
+    font-size: 1.5rem; }
+  .price-section .filter-group {
+    flex-direction: column;
+    align-items: center; }
+  .price-section .filter-group select {
+    width: 100%;
+    margin: 0.5rem 0; }
+  .price-section .table {
+    display: none; }
+  .price-section .vaccine-card {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e63946;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .price-section .vaccine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3); }
+  .price-section .vaccine-card p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem; }
+  .price-section .vaccine-card .btn-primary {
+    width: 100%; }
+  .services-section .service-card h3 {
+    font-size: 1.3rem; }
+  .services-section .service-card p,
+  .services-section .service-card ul li {
+    font-size: 0.9rem; } }
+
+@media (min-width: 769px) {
+  .price-section .vaccine-card {
+    display: none; } }

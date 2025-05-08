@@ -1,235 +1,296 @@
-<h1 class="text-uppercase text-center mt-4 mb-5">TIN TỨC</h1>
-<div class="container">
-  <div class="news_main mb_30">
-    <div class="box_border">
-      <div class="row div_flex">
-        <div class="col-sm-6 col-xs-12 item noright">
-          <a class="thumb_post" href="https://vnvc.vn/luu-y-khi-tiem-vac-xin-phe-cau-cho-phu-nu-chuan-bi-mang-thai/">
-            <img class="img-responsive" src="https://vnvc.vn/wp-content/uploads/2025/04/ban-nu-tiem-vac-xin-phe-cau.jpg"
-              width="800" alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai" />
-          </a>
-        </div>
-        <div class="col-sm-6 col-xs-12 item noleft">
-          <div class="pl_15 pr_15">
-            <a class="title_post" title="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai"
-              href="https://vnvc.vn/luu-y-khi-tiem-vac-xin-phe-cau-cho-phu-nu-chuan-bi-mang-thai/">
-              <h2 class="mt_10 mb_15 sz_18 cl_33">Những lưu ý quan trọng khi
-                tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai</h2>
-            </a>
-            <div class="mb_10 mb_5mb small">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
-              23/04/2025
+<!-- Header Section -->
+  <div class="header-section">
+    <div class="container">
+      <h1>Tin Tức CIVAC</h1>
+      <p>Cập nhật thông tin mới nhất về vắc-xin, phòng bệnh, và sức khỏe cộng đồng từ Hệ thống Trung tâm Tiêm chủng CIVAC.</p>
+      <a href="/datlichvacxin" class="btn-primary">Đặt lịch ngay</a>
+    </div>
+  </div>
+
+  <!-- News Section -->
+  <div class="news-section">
+    <div class="container">
+      <div class="filter-group">
+        <select id="topic-filter" class="form-control">
+          <option value="all">Tất cả chủ đề</option>
+          <option value="vaccine">Vắc-xin</option>
+          <option value="disease">Bệnh truyền nhiễm</option>
+          <option value="pregnancy">Phụ nữ mang thai</option>
+        </select>
+        <select id="date-filter" class="form-control">
+          <option value="all">Tất cả ngày</option>
+          <option value="newest">Mới nhất</option>
+          <option value="oldest">Cũ nhất</option>
+        </select>
+      </div>
+
+      <!-- Featured News -->
+      <div class="featured-card">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="https://VNVC.vn/wp-content/uploads/2025/04/ban-nu-tiem-vac-xin-phe-cau.jpg" class="img-fluid" alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h3>Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai</h3>
+              <div class="date"><i class="fa fa-calendar"></i> 23/04/2025</div>
+              <p>Tiêm vắc xin phế cầu trước khi mang thai là giải pháp hiệu quả nhất để bảo vệ sức khỏe thai phụ và sự phát triển của thai nhi trước các bệnh lý nguy hiểm do phế cầu gây ra như viêm phổi, viêm màng não, nhiễm trùng máu…</p>
+              <a href="https://VNVC.vn/luu-y-khi-tiem-vac-xin-phe-cau-cho-phu-nu-chuan-bi-mang-thai/" class="btn-primary">Đọc thêm</a>
             </div>
-            <p class="text-justify">Tiêm vắc xin phế cầu trước khi mang thai là
-              giải pháp hiệu quả nhất để bảo vệ sức khỏe thai phụ và sự phát
-              triển của thai nhi trước các bệnh lý nguy hiểm do phế cầu gây ra
-              như viêm phổi, viêm màng não, nhiễm trùng máu… Phế cầu khuẩn là
-              nguyên nhân...</p>
           </div>
         </div>
+      </div>
+
+      <!-- News Grid -->
+      <div class="row" id="news-grid">
+        <div class="col-md-4 col-sm-6">
+          <div class="news-card" data-topic="disease" data-date="2025-04-14">
+            <img src="https://VNVC.vn/wp-content/uploads/2025/04/zona-than-kinh-o-nguoi-co-benh-nen.jpg" alt="Càng nhiều bệnh nền, nguy cơ mắc zona thần kinh càng cao">
+            <div class="card-body">
+              <h3>Càng nhiều bệnh nền, nguy cơ mắc zona thần kinh càng cao</h3>
+              <div class="date"><i class="fa fa-calendar"></i> 14/04/2025</div>
+              <p>Người có bệnh nền như tiểu đường, tim mạch có nguy cơ cao mắc zona thần kinh, gây đau đớn và biến chứng nguy hiểm.</p>
+              <a href="https://VNVC.vn/cang-nhieu-benh-nen-nguy-co-mac-zona-than-kinh-cang-cao/" class="btn-primary">Đọc thêm</a>
+              <div class="share-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://VNVC.vn/cang-nhieu-benh-nen-nguy-co-mac-zona-than-kinh-cang-cao/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://VNVC.vn/cang-nhieu-benh-nen-nguy-co-mac-zona-than-kinh-cang-cao/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://pinterest.com/pin/create/button/?url=https://VNVC.vn/cang-nhieu-benh-nen-nguy-co-mac-zona-than-kinh-cang-cao/&media=https://VNVC.vn/wp-content/uploads/2025/04/zona-than-kinh-o-nguoi-co-benh-nen.jpg" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="news-card" data-topic="disease" data-date="2025-04-14">
+            <img src="https://VNVC.vn/wp-content/uploads/2025/04/nguoi-dang-dieu-tri-uon-van.jpg" alt="Gánh nợ hàng chục triệu đồng sau điều trị uốn ván">
+            <div class="card-body">
+              <h3>Gánh nợ hàng chục triệu đồng sau điều trị uốn ván</h3>
+              <div class="date"><i class="fa fa-calendar"></i> 14/04/2025</div>
+              <p>Chi phí điều trị uốn ván cao, tiêm vắc-xin uốn ván là cách phòng ngừa hiệu quả và tiết kiệm.</p>
+              <a href="https://VNVC.vn/ganh-no-hang-chuc-trieu-dong-sau-dieu-tri-uon-van/" class="btn-primary">Đọc thêm</a>
+              <div class="share-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://VNVC.vn/ganh-no-hang-chuc-trieu-dong-sau-dieu-tri-uon-van/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://VNVC.vn/ganh-no-hang-chuc-trieu-dong-sau-dieu-tri-uon-van/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://pinterest.com/pin/create/button/?url=https://VNVC.vn/ganh-no-hang-chuc-trieu-dong-sau-dieu-tri-uon-van/&media=https://VNVC.vn/wp-content/uploads/2025/04/nguoi-dang-dieu-tri-uon-van.jpg" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="news-card" data-topic="pregnancy" data-date="2025-04-08">
+            <img src="https://VNVC.vn/wp-content/uploads/2025/04/phu-nu-mang-thai.jpg" alt="Những hiểu lầm thường gặp về phế cầu ở phụ nữ mang thai">
+            <div class="card-body">
+              <h3>Những hiểu lầm thường gặp về phế cầu ở phụ nữ mang thai</h3>
+              <div class="date"><i class="fa fa-calendar"></i> 08/04/2025</div>
+              <p>Nhiều phụ nữ mang thai hiểu sai về vắc-xin phế cầu, dẫn đến nguy cơ mắc bệnh nguy hiểm.</p>
+              <a href="https://VNVC.vn/nhung-hieu-lam-thuong-gap-ve-phe-cau-o-phu-nu-mang-thai/" class="btn-primary">Đọc thêm</a>
+              <div class="share-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://VNVC.vn/nhung-hieu-lam-thuong-gap-ve-phe-cau-o-phu-nu-mang-thai/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://VNVC.vn/nhung-hieu-lam-thuong-gap-ve-phe-cau-o-phu-nu-mang-thai/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://pinterest.com/pin/create/button/?url=https://VNVC.vn/nhung-hieu-lam-thuong-gap-ve-phe-cau-o-phu-nu-mang-thai/&media=https://VNVC.vn/wp-content/uploads/2025/04/phu-nu-mang-thai.jpg" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="news-card" data-topic="disease" data-date="2025-04-03">
+            <img src="https://VNVC.vn/wp-content/uploads/2025/04/cho-mac-benh-dai.jpg" alt="Vì sao 100% người bị chó cắn tử vong khi phát bệnh dại?">
+            <div class="card-body">
+              <h3>Vì sao 100% người bị chó cắn tử vong khi phát bệnh dại?</h3>
+              <div class="date"><i class="fa fa-calendar"></i> 03/04/2025</div>
+              <p>Bệnh dại có tỷ lệ tử vong 100% khi phát bệnh, tiêm vắc-xin dại là cách phòng ngừa duy nhất.</p>
+              <a href="https://VNVC.vn/vi-sao-nguoi-bi-cho-can-tu-vong-khi-phat-benh-dai/" class="btn-primary">Đọc thêm</a>
+              <div class="share-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://VNVC.vn/vi-sao-nguoi-bi-cho-can-tu-vong-khi-phat-benh-dai/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://VNVC.vn/vi-sao-nguoi-bi-cho-can-tu-vong-khi-phat-benh-dai/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://pinterest.com/pin/create/button/?url=https://VNVC.vn/vi-sao-nguoi-bi-cho-can-tu-vong-khi-phat-benh-dai/&media=https://VNVC.vn/wp-content/uploads/2025/04/cho-mac-benh-dai.jpg" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="news-card" data-topic="disease" data-date="2025-04-03">
+            <img src="https://VNVC.vn/wp-content/uploads/2025/04/bi-cho-can-nhieu-nam-sau-moi-phat-dai.jpg" alt="Vì sao bị chó cắn nhiều năm sau mới phát dại?">
+            <div class="card-body">
+              <h3>Vì sao bị chó cắn nhiều năm sau mới phát dại?</h3>
+              <div class="date"><i class="fa fa-calendar"></i> 03/04/2025</div>
+              <p>Virus dại có thể tiềm ẩn nhiều năm trước khi phát bệnh, cần tiêm vắc-xin ngay sau khi bị cắn.</p>
+              <a href="https://VNVC.vn/vi-sao-bi-cho-can-nhieu-nam-sau-moi-phat-dai/" class="btn-primary">Đọc thêm</a>
+              <div class="share-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://VNVC.vn/vi-sao-bi-cho-can-nhieu-nam-sau-moi-phat-dai/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://VNVC.vn/vi-sao-bi-cho-can-nhieu-nam-sau-moi-phat-dai/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://pinterest.com/pin/create/button/?url=https://VNVC.vn/vi-sao-bi-cho-can-nhieu-nam-sau-moi-phat-dai/&media=https://VNVC.vn/wp-content/uploads/2025/04/bi-cho-can-nhieu-nam-sau-moi-phat-dai.jpg" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="news-card" data-topic="vaccine" data-date="2025-03-29">
+            <img src="https://VNVC.vn/wp-content/uploads/2025/03/lich-tiem-soi-cho-tre-tu-6-thang.jpg" alt="Lịch tiêm vắc xin sởi cho trẻ từ 6 tháng tuổi">
+            <div class="card-body">
+              <h3>Lịch tiêm vắc xin sởi cho trẻ từ 6 tháng tuổi</h3>
+              <div class="date"><i class="fa fa-calendar"></i> 29/03/2025</div>
+              <p>Tiêm vắc-xin sởi đúng lịch từ 6 tháng tuổi giúp trẻ phòng bệnh hiệu quả, tránh biến chứng.</p>
+              <a href="https://VNVC.vn/lich-tiem-vac-xin-soi-cho-tre-tu-6-thang-tuoi/" class="btn-primary">Đọc thêm</a>
+              <div class="share-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://VNVC.vn/lich-tiem-vac-xin-soi-cho-tre-tu-6-thang-tuoi/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://VNVC.vn/lich-tiem-vac-xin-soi-cho-tre-tu-6-thang-tuoi/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://pinterest.com/pin/create/button/?url=https://VNVC.vn/lich-tiem-vac-xin-soi-cho-tre-tu-6-thang-tuoi/&media=https://VNVC.vn/wp-content/uploads/2025/03/lich-tiem-soi-cho-tre-tu-6-thang.jpg" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="news-card" data-topic="vaccine" data-date="2025-03-27">
+            <img src="https://VNVC.vn/wp-content/uploads/2025/03/tiem-vac-xin-nao-mo-cau-cho-tre.jpg" alt="Đã tiêm vắc xin não mô cầu B thì có tiêm não mô cầu BC không?">
+            <div class="card-body">
+              <h3>Đã tiêm vắc xin não mô cầu B thì có tiêm não mô cầu BC không?</h3>
+              <div class="date"><i class="fa fa-calendar"></i> 27/03/2025</div>
+              <p>Hiểu rõ sự khác biệt giữa vắc-xin não mô cầu B và BC để tiêm phòng đúng cách cho trẻ.</p>
+              <a href="https://VNVC.vn/da-tiem-vac-xin-nao-mo-cau-b-thi-co-tiem-nao-mo-cau-bc-khong/" class="btn-primary">Đọc thêm</a>
+              <div class="share-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://VNVC.vn/da-tiem-vac-xin-nao-mo-cau-b-thi-co-tiem-nao-mo-cau-bc-khong/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://VNVC.vn/da-tiem-vac-xin-nao-mo-cau-b-thi-co-tiem-nao-mo-cau-bc-khong/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://pinterest.com/pin/create/button/?url=https://VNVC.vn/da-tiem-vac-xin-nao-mo-cau-b-thi-co-tiem-nao-mo-cau-bc-khong/&media=https://VNVC.vn/wp-content/uploads/2025/03/tiem-vac-xin-nao-mo-cau-cho-tre.jpg" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="news-card" data-topic="disease" data-date="2025-03-26">
+            <img src="https://VNVC.vn/wp-content/uploads/2025/03/virus-nao-mo-cau.jpg" alt="Phát hiện ổ dịch não mô cầu tại Thái Bình, khẩn trương tiêm phòng">
+            <div class="card-body">
+              <h3>Phát hiện ổ dịch não mô cầu tại Thái Bình, khẩn trương tiêm phòng</h3>
+              <div class="date"><i class="fa fa-calendar"></i> 26/03/2025</div>
+              <p>Ổ dịch não mô cầu tại Thái Bình cảnh báo nguy cơ lây lan, cần tiêm vắc-xin khẩn cấp.</p>
+              <a href="https://VNVC.vn/phat-hien-o-dich-nao-mo-cau-tai-thai-binh/" class="btn-primary">Đọc thêm</a>
+              <div class="share-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://VNVC.vn/phat-hien-o-dich-nao-mo-cau-tai-thai-binh/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://VNVC.vn/phat-hien-o-dich-nao-mo-cau-tai-thai-binh/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://pinterest.com/pin/create/button/?url=https://VNVC.vn/phat-hien-o-dich-nao-mo-cau-tai-thai-binh/&media=https://VNVC.vn/wp-content/uploads/2025/03/virus-nao-mo-cau.jpg" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="news-card" data-topic="disease" data-date="2025-03-20">
+            <img src="https://VNVC.vn/wp-content/uploads/2025/03/tiem-vac-xin-soi-cho-tre.jpg" alt="Dịch sởi có nguy cơ bùng phát, cần tăng tỷ lệ tiêm chủng đạt 95%">
+            <div class="card-body">
+              <h3>Dịch sởi có nguy cơ bùng phát, cần tăng tỷ lệ tiêm chủng đạt 95%</h3>
+              <div class="date"><i class="fa fa-calendar"></i> 20/03/2025</div>
+              <p>Tỷ lệ tiêm vắc-xin sởi cần đạt 95% để ngăn chặn nguy cơ bùng phát dịch trong cộng đồng.</p>
+              <a href="https://VNVC.vn/dich-soi-co-nguy-co-bung-phat-can-tang-ty-le-tiem-chung/" class="btn-primary">Đọc thêm</a>
+              <div class="share-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://VNVC.vn/dich-soi-co-nguy-co-bung-phat-can-tang-ty-le-tiem-chung/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://VNVC.vn/dich-soi-co-nguy-co-bung-phat-can-tang-ty-le-tiem-chung/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="http://pinterest.com/pin/create/button/?url=https://VNVC.vn/dich-soi-co-nguy-co-bung-phat-can-tang-ty-le-tiem-chung/&media=https://VNVC.vn/wp-content/uploads/2025/03/tiem-vac-xin-soi-cho-tre.jpg" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination-section">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#" data-page="prev">Trước</a></li>
+          <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-page="4">4</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-page="next">Sau</a></li>
+        </ul>
       </div>
     </div>
   </div>
-  <div class="row div_flex top">
-    <div class="col-xs-12 col-sm-4 mb_15 item">
-      <div class="row div_flex_mobile top mb_5mb">
-        <a class="thumb_post col-sm-12 col-xs-6 item"
-          href="https://vnvc.vn/cang-nhieu-benh-nen-nguy-co-mac-zona-than-kinh-cang-cao/">
-          <img class="img-responsive mb_15"
-            src="https://vnvc.vn/wp-content/uploads/2025/04/zona-than-kinh-o-nguoi-co-benh-nen.jpg" width="800"
-            alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai" />
-        </a>
-        <div class="col-sm-12 col-xs-6 item noleft_mb text-justify">
-          <a class="title_post" title="Càng nhiều bệnh nền, nguy cơ mắc zona thần kinh càng cao"
-            href="https://vnvc.vn/cang-nhieu-benh-nen-nguy-co-mac-zona-than-kinh-cang-cao/">
-            <h2 class="mtr_5 mb_15 mb_5mb sz_16 cl_33">Càng nhiều bệnh nền, nguy
-              cơ mắc zona thần kinh càng cao</h2>
-          </a>
-          <div class="mb_10 mb_5mb small">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            14/04/2025
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 mb_15 item">
-      <div class="row div_flex_mobile top mb_5mb">
-        <a class="thumb_post col-sm-12 col-xs-6 item"
-          href="https://vnvc.vn/ganh-no-hang-chuc-trieu-dong-sau-dieu-tri-uon-van/">
-          <img class="img-responsive mb_15"
-            src="https://vnvc.vn/wp-content/uploads/2025/04/nguoi-dang-dieu-tri-uon-van.jpg" width="800"
-            alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai" />
-        </a>
-        <div class="col-sm-12 col-xs-6 item noleft_mb text-justify">
-          <a class="title_post" title="Gánh nợ hàng chục triệu đồng sau điều trị uốn ván"
-            href="https://vnvc.vn/ganh-no-hang-chuc-trieu-dong-sau-dieu-tri-uon-van/">
-            <h2 class="mtr_5 mb_15 mb_5mb sz_16 cl_33">Gánh nợ hàng chục triệu
-              đồng sau điều trị uốn ván</h2>
-          </a>
-          <div class="mb_10 mb_5mb small">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            14/04/2025
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 mb_15 item">
-      <div class="row div_flex_mobile top mb_5mb">
-        <a class="thumb_post col-sm-12 col-xs-6 item"
-          href="https://vnvc.vn/nhung-hieu-lam-thuong-gap-ve-phe-cau-o-phu-nu-mang-thai/">
-          <img class="img-responsive mb_15" src="https://vnvc.vn/wp-content/uploads/2025/04/phu-nu-mang-thai.jpg"
-            width="800" alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai" />
-        </a>
-        <div class="col-sm-12 col-xs-6 item noleft_mb text-justify">
-          <a class="title_post" title="Những hiểu lầm thường gặp về phế cầu ở phụ nữ mang thai"
-            href="https://vnvc.vn/nhung-hieu-lam-thuong-gap-ve-phe-cau-o-phu-nu-mang-thai/">
-            <h2 class="mtr_5 mb_15 mb_5mb sz_16 cl_33">Những hiểu lầm thường gặp
-              về phế cầu ở phụ nữ mang thai</h2>
-          </a>
-          <div class="mb_10 mb_5mb small">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            08/04/2025
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row div_flex top">
-    <div class="col-xs-12 col-sm-4 mb_15 item">
-      <div class="row div_flex_mobile top mb_5mb">
-        <a class="thumb_post col-sm-12 col-xs-6 item"
-          href="https://vnvc.vn/vi-sao-nguoi-bi-cho-can-tu-vong-khi-phat-benh-dai/">
-          <img class="img-responsive mb_15" src="https://vnvc.vn/wp-content/uploads/2025/04/cho-mac-benh-dai.jpg"
-            width="800" alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai" />
-        </a>
-        <div class="col-sm-12 col-xs-6 item noleft_mb text-justify">
-          <a class="title_post" title="Vì sao 100% người bị chó cắn tử vong khi phát bệnh dại?"
-            href="https://vnvc.vn/vi-sao-nguoi-bi-cho-can-tu-vong-khi-phat-benh-dai/">
-            <h2 class="mtr_5 mb_15 mb_5mb sz_16 cl_33">Vì sao 100% người bị chó
-              cắn tử vong khi phát bệnh dại?</h2>
-          </a>
-          <div class="mb_10 mb_5mb small">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            03/04/2025
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 mb_15 item">
-      <div class="row div_flex_mobile top mb_5mb">
-        <a class="thumb_post col-sm-12 col-xs-6 item"
-          href="https://vnvc.vn/vi-sao-bi-cho-can-nhieu-nam-sau-moi-phat-dai/">
-          <img class="img-responsive mb_15"
-            src="https://vnvc.vn/wp-content/uploads/2025/04/bi-cho-can-nhieu-nam-sau-moi-phat-dai.jpg" width="800"
-            alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai" />
-        </a>
-        <div class="col-sm-12 col-xs-6 item noleft_mb text-justify">
-          <a class="title_post" title="Vì sao bị chó cắn nhiều năm sau mới phát dại?"
-            href="https://vnvc.vn/vi-sao-bi-cho-can-nhieu-nam-sau-moi-phat-dai/">
-            <h2 class="mtr_5 mb_15 mb_5mb sz_16 cl_33">Vì sao bị chó cắn nhiều
-              năm sau mới phát dại?</h2>
-          </a>
-          <div class="mb_10 mb_5mb small">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            03/04/2025
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 mb_15 item">
-      <div class="row div_flex_mobile top mb_5mb">
-        <a class="thumb_post col-sm-12 col-xs-6 item"
-          href="https://vnvc.vn/lich-tiem-vac-xin-soi-cho-tre-tu-6-thang-tuoi/">
-          <img class="img-responsive mb_15"
-            src="https://vnvc.vn/wp-content/uploads/2025/03/lich-tiem-soi-cho-tre-tu-6-thang.jpg" width="800"
-            alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai" />
-        </a>
-        <div class="col-sm-12 col-xs-6 item noleft_mb text-justify">
-          <a class="title_post" title="Lịch tiêm vắc xin sởi cho trẻ từ 6 tháng tuổi"
-            href="https://vnvc.vn/lich-tiem-vac-xin-soi-cho-tre-tu-6-thang-tuoi/">
-            <h2 class="mtr_5 mb_15 mb_5mb sz_16 cl_33">Lịch tiêm vắc xin sởi cho
-              trẻ từ 6 tháng tuổi</h2>
-          </a>
-          <div class="mb_10 mb_5mb small">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            29/03/2025
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row div_flex top">
-    <div class="col-xs-12 col-sm-4 mb_15 item">
-      <div class="row div_flex_mobile top mb_5mb">
-        <a class="thumb_post col-sm-12 col-xs-6 item"
-          href="https://vnvc.vn/da-tiem-vac-xin-nao-mo-cau-b-thi-co-tiem-nao-mo-cau-bc-khong/">
-          <img class="img-responsive mb_15"
-            src="https://vnvc.vn/wp-content/uploads/2025/03/tiem-vac-xin-nao-mo-cau-cho-tre.jpg" width="800"
-            alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai" />
-        </a>
-        <div class="col-sm-12 col-xs-6 item noleft_mb text-justify">
-          <a class="title_post" title="Đã tiêm vắc xin não mô cầu B thì có tiêm não mô cầu BC không?"
-            href="https://vnvc.vn/da-tiem-vac-xin-nao-mo-cau-b-thi-co-tiem-nao-mo-cau-bc-khong/">
-            <h2 class="mtr_5 mb_15 mb_5mb sz_16 cl_33">Đã tiêm vắc xin não mô
-              cầu B thì có tiêm não mô cầu BC không?</h2>
-          </a>
-          <div class="mb_10 mb_5mb small">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            27/03/2025
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 mb_15 item">
-      <div class="row div_flex_mobile top mb_5mb">
-        <a class="thumb_post col-sm-12 col-xs-6 item" href="https://vnvc.vn/phat-hien-o-dich-nao-mo-cau-tai-thai-binh/">
-          <img class="img-responsive mb_15" src="https://vnvc.vn/wp-content/uploads/2025/03/virus-nao-mo-cau.jpg"
-            width="800" alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai" />
-        </a>
-        <div class="col-sm-12 col-xs-6 item noleft_mb text-justify">
-          <a class="title_post" title="Phát hiện ổ dịch não mô cầu tại Thái Bình, khẩn trương tiêm phòng"
-            href="https://vnvc.vn/phat-hien-o-dich-nao-mo-cau-tai-thai-binh/">
-            <h2 class="mtr_5 mb_15 mb_5mb sz_16 cl_33">Phát hiện ổ dịch não mô
-              cầu tại Thái Bình, khẩn trương tiêm phòng</h2>
-          </a>
-          <div class="mb_10 mb_5mb small">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            26/03/2025
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 mb_15 item">
-      <div class="row div_flex_mobile top mb_5mb">
-        <a class="thumb_post col-sm-12 col-xs-6 item"
-          href="https://vnvc.vn/dich-soi-co-nguy-co-bung-phat-can-tang-ty-le-tiem-chung/">
-          <img class="img-responsive mb_15"
-            src="https://vnvc.vn/wp-content/uploads/2025/03/tiem-vac-xin-soi-cho-tre.jpg" width="800"
-            alt="Những lưu ý quan trọng khi tiêm vắc xin Phế cầu cho phụ nữ chuẩn bị mang thai" />
-        </a>
-        <div class="col-sm-12 col-xs-6 item noleft_mb text-justify">
-          <a class="title_post" title="Dịch sởi có nguy cơ bùng phát, cần tăng tỷ lệ tiêm chủng đạt 95%"
-            href="https://vnvc.vn/dich-soi-co-nguy-co-bung-phat-can-tang-ty-le-tiem-chung/">
-            <h2 class="mtr_5 mb_15 mb_5mb sz_16 cl_33">Dịch sởi có nguy cơ bùng
-              phát, cần tăng tỷ lệ tiêm chủng đạt 95%</h2>
-          </a>
-          <div class="mb_10 mb_5mb small">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            20/03/2025
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="store-filter clearfix">
-                    <ul class="store-pagination">
-                        <li class="active">1</li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                    </ul>
-                </div>
-  </div>
-</div>
+
+  <!-- Bootstrap 5 JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <!-- Font Awesome JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <!-- Filter and Pagination Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const topicFilter = document.getElementById('topic-filter');
+      const dateFilter = document.getElementById('date-filter');
+      const newsCards = document.querySelectorAll('.news-card');
+      const paginationLinks = document.querySelectorAll('.pagination .page-link');
+      const itemsPerPage = 6;
+      let currentPage = 1;
+
+      function filterNews() {
+        const topicValue = topicFilter.value;
+        const dateValue = dateFilter.value;
+
+        let filteredCards = Array.from(newsCards);
+        if (topicValue !== 'all') {
+          filteredCards = filteredCards.filter(card => card.dataset.topic === topicValue);
+        }
+
+        if (dateValue !== 'all') {
+          filteredCards.sort((a, b) => {
+            const dateA = new Date(a.dataset.date);
+            const dateB = new Date(b.dataset.date);
+            return dateValue === 'newest' ? dateB - dateA : dateA - dateB;
+          });
+        }
+
+        updatePagination(filteredCards);
+      }
+
+      function updatePagination(filteredCards) {
+        const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
+        const pagination = document.querySelector('.pagination');
+        pagination.innerHTML = '';
+
+        if (totalPages <= 1) return;
+
+        // Previous button
+        pagination.innerHTML += `
+          <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+            <a class="page-link" href="#" data-page="prev">Trước</a>
+          </li>
+        `;
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+          pagination.innerHTML += `
+            <li class="page-item ${currentPage === i ? 'active' : ''}">
+              <a class="page-link" href="#" data-page="${i}">${i}</a>
+            </li>
+          `;
+        }
+
+        // Next button
+        pagination.innerHTML += `
+          <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+            <a class="page-link" href="#" data-page="next">Sau</a>
+          </li>
+        `;
+
+        // Show/hide cards
+        filteredCards.forEach((card, index) => {
+          const pageIndex = Math.floor(index / itemsPerPage) + 1;
+          card.style.display = pageIndex === currentPage ? 'block' : 'none';
+        });
+
+        // Update pagination event listeners
+        document.querySelectorAll('.pagination .page-link').forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const page = e.target.dataset.page;
+            if (page === 'prev' && currentPage > 1) currentPage--;
+            else if (page === 'next' && currentPage < totalPages) currentPage++;
+            else if (!isNaN(page)) currentPage = parseInt(page);
+            updatePagination(filteredCards);
+          });
+        });
+      }
+
+      topicFilter.addEventListener('change', filterNews);
+      dateFilter.addEventListener('change', filterNews);
+
+      // Initial pagination
+      filterNews();
+    });
+  </script>

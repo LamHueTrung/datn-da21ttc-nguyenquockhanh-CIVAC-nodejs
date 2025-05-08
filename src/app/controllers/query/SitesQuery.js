@@ -2,6 +2,10 @@ const jwt = require('jsonwebtoken');
 
 class SitesQuery {
     
+    BookVaccine(req, res) {
+        res.status(200).render('pages/book_vaccine', { layout: 'main_user'});
+    }
+
     async HomeVacxin(req, res) {
         res.status(200).render('pages/home_vacxin', { layout: 'main_user'});
     }
@@ -30,10 +34,14 @@ class SitesQuery {
         res.status(200).render('pages/home', { layout: 'main_user'});
     }
 
-    // Render login page
-    login(req, res) {
-        res.status(200).render('Login', { layout: 'Login'});
+    Authention(req, res) {
+        res.status(200).render('pages/authention', { layout: 'Login'});
     }
+
+    Profile(req, res) {
+        res.status(200).render('pages/profile', { layout: 'main_user'});
+    }
+
     async Index(req, res, next) {
         res.status(200).render("pages/main", {
             layout: "main",

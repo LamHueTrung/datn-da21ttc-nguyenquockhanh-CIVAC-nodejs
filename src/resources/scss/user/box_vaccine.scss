@@ -1,0 +1,274 @@
+/* Header Section */
+.header-section {
+        padding: 60px 0;
+        background: #ffffff;
+        border-bottom: 2px solid #e63946;
+        text-align: center;
+      }
+  
+      .header-section h1 {
+        color: #D10024;
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+      }
+  
+      .header-section p {
+        font-size: 1.2rem;
+        color: #1d1d1d;
+        margin-bottom: 2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  
+      .header-section .btn-primary {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #e63946, #1d1d1d);
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+  
+      .header-section .btn-primary:hover {
+        background: linear-gradient(90deg, #f94144, #2b2b2b);
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+      }
+  
+      /* Packages Section */
+      .packages-section {
+        padding: 40px 0;
+      }
+  
+      .packages-section h2 {
+        color: #D10024;
+        font-weight: 600;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+  
+      .package-card {
+        background: #ffffff;
+        border: 1px solid #e63946;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+  
+      .package-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+      }
+  
+      .package-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+  
+      .package-card h3 {
+        color: #1d1d1d;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      .package-card p {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 1rem;
+        flex-grow: 1;
+      }
+  
+      .package-card .price {
+        color: #D10024;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+  
+      .package-card .btn-primary {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #e63946, #1d1d1d);
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+  
+      .package-card .btn-primary:hover {
+        background: linear-gradient(90deg, #f94144, #2b2b2b);
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+      }
+  
+      /* Offers Section */
+      .offers-section {
+        padding: 40px 0;
+        background: #f8f9fa;
+      }
+  
+      .offers-section h2 {
+        color: #D10024;
+        font-weight: 600;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+  
+      .offer-card {
+        background: #ffffff;
+        border: 1px solid #e63946;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+      }
+  
+      .offer-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+      }
+  
+      .offer-card h3 {
+        color: #1d1d1d;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+  
+      .offer-card p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1rem;
+      }
+  
+      .offer-card .btn-primary {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #e63946, #1d1d1d);
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+  
+      .offer-card .btn-primary:hover {
+        background: linear-gradient(90deg, #f94144, #2b2b2b);
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+      }
+  
+      /* Contact Section */
+      .contact-section {
+        padding: 40px 0;
+        background: #e63946;
+        text-align: center;
+        color: #ffffff;
+      }
+  
+      .contact-section h2 {
+        font-weight: 600;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+  
+      .contact-section p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+  
+      .contact-section ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+      }
+  
+      .contact-section ul li {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      .contact-section ul li i {
+        margin-right: 0.5rem;
+      }
+  
+      .contact-section .btn-primary {
+        background: #ffffff;
+        color: #1d1d1d;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+  
+      .contact-section .btn-primary:hover {
+        background: #f8f9fa;
+        color: #e63946;
+        transform: scale(1.05);
+      }
+  
+      /* Responsive */
+      @media (max-width: 768px) {
+        .header-section {
+          padding: 30px 0;
+        }
+  
+        .header-section h1 {
+          font-size: 2rem;
+        }
+  
+        .header-section p {
+          font-size: 1rem;
+        }
+  
+        .packages-section,
+        .offers-section,
+        .contact-section {
+          padding: 20px 0;
+        }
+  
+        .packages-section h2,
+        .offers-section h2,
+        .contact-section h2 {
+          font-size: 1.5rem;
+        }
+  
+        .package-card img {
+          height: 150px;
+        }
+  
+        .package-card h3,
+        .offer-card h3 {
+          font-size: 1.3rem;
+        }
+  
+        .package-card p,
+        .offer-card p {
+          font-size: 0.9rem;
+        }
+      }

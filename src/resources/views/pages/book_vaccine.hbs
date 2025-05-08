@@ -1,0 +1,122 @@
+<!-- Booking Container -->
+  <div class="booking-container">
+    <h2>Đặt Lịch Tiêm Chủng</h2>
+    <form id="booking-form" onsubmit="bookVaccine(event)">
+      <div class="form-group">
+        <label for="child-select">Chọn trẻ (*)</label>
+        <select id="child-select" class="form-control" required>
+          <option value="" disabled selected>Chọn trẻ</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="vaccine-select">Loại vắc-xin (*)</label>
+        <select id="vaccine-select" class="form-control" required>
+          <option value="" disabled selected>Chọn loại vắc-xin</option>
+          <option value="5-in-1">Vắc-xin 5 trong 1</option>
+          <option value="6-in-1">Vắc-xin 6 trong 1</option>
+          <option value="measles">Vắc-xin sởi</option>
+          <option value="pneumococcal">Vắc-xin phế cầu</option>
+          <option value="package">Gói vắc-xin trọn gói</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Ngày tiêm (*)</label>
+        <input type="date" id="date" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Giờ tiêm (*)</label>
+        <select id="time" class="form-control" required>
+          <option value="" disabled selected>Chọn giờ</option>
+          <option value="08:00">08:00</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="facility">Trung tâm tiêm (*)</label>
+        <select id="facility" class="form-control" required>
+          <option value="" disabled selected>Chọn trung tâm</option>
+          <option value="VNVC Hà Nội">VNVC Hà Nội</option>
+          <option value="VNVC TP.HCM">VNVC TP.HCM</option>
+          <option value="Vinmec Hà Nội">Vinmec Hà Nội</option>
+          <option value="Vinmec TP.HCM">Vinmec TP.HCM</option>
+          <option value="Hồng Ngọc Hà Nội">Hồng Ngọc Hà Nội</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="note">Ghi chú</label>
+        <textarea id="note" class="form-control" placeholder="Nhập ghi chú (tùy chọn)"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Đặt lịch</button>
+    </form>
+  </div>
+
+  <script>
+    function loadChildren() {
+      const children = JSON.parse(localStorage.getItem('children') || '[]');
+      const select = document.getElementById('child-select');
+      select.innerHTML = '<option value="" disabled selected>Chọn trẻ</option>';
+      if (children.length === 0) {
+        select.innerHTML += '<option value="" disabled>Chưa có trẻ, vui lòng thêm trẻ</option>';
+      } else {
+        children.forEach(child => {
+          const option = document.createElement('option');
+          option.value = child.id;
+          option.textContent = `${child.name} (${child.dob})`;
+          select.appendChild(option);
+        });
+      }
+    }
+
+    function setMinDate() {
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('date').setAttribute('min', today);
+    }
+
+    function bookVaccine(event) {
+      event.preventDefault();
+      const childSelect = document.getElementById('child-select');
+      if (childSelect.value === '') {
+        Swal.fire({
+          title: 'Lỗi',
+          text: 'Vui lòng thêm trẻ trước khi đặt lịch!',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#e63946'
+        });
+        return;
+      }
+      const appointment = {
+        id: Date.now().toString(),
+        childId: childSelect.value,
+        vaccine: document.getElementById('vaccine-select').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        facility: document.getElementById('facility').value,
+        note: document.getElementById('note').value
+      };
+      const appointments = JSON.parse(localStorage.getItem('appointments') || '[]');
+      appointments.push(appointment);
+      localStorage.setItem('appointments', JSON.stringify(appointments));
+      Swal.fire({
+        title: 'Thành công',
+        text: 'Lịch tiêm chủng đã được đặt thành công!',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#e63946'
+      }).then(() => {
+        document.getElementById('booking-form').reset();
+        loadChildren();
+      });
+    }
+
+    // Kiểm tra trạng thái khi tải trang
+    document.addEventListener('DOMContentLoaded', () => {
+      loadChildren();
+      setMinDate();
+    });
+  </script>

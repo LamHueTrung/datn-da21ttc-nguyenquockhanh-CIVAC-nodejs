@@ -1,0 +1,96 @@
+<div class="auth-container">
+    <!-- Form Đăng Nhập -->
+    <div id="login-form">
+      <h2>Đăng Nhập</h2>
+      <form id="login-form-element" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="login-email">Email (*)</label>
+          <input type="email" id="login-email" class="form-control" placeholder="Nhập email" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Mật khẩu (*)</label>
+          <input type="password" id="login-password" class="form-control" placeholder="Nhập mật khẩu" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+      </form>
+      <a class="toggle-link" onclick="toggleForm('register')">Chưa có tài khoản? Đăng ký</a>
+    </div>
+
+    <!-- Form Đăng Ký Tài Khoản -->
+    <div id="register-form" class="form-hidden">
+      <h2>Đăng Ký Tài Khoản</h2>
+      <form>
+        <div class="form-group">
+          <label for="parent-name">Họ và tên phụ huynh (*)</label>
+          <input type="text" id="parent-name" class="form-control" placeholder="Nhập họ và tên" required>
+        </div>
+        <div class="form-group">
+          <label for="parent-email">Email (*)</label>
+          <input type="email" id="parent-email" class="form-control" placeholder="Nhập email" required>
+        </div>
+        <div class="form-group">
+          <label for="parent-password">Mật khẩu (*)</label>
+          <input type="password" id="parent-password" class="form-control" placeholder="Nhập mật khẩu" required>
+        </div>
+        <div class="form-group">
+          <label for="parent-phone">Số điện thoại (*)</label>
+          <input type="tel" id="parent-phone" class="form-control" placeholder="Nhập số điện thoại" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+          <label for="address-city">Tỉnh/Thành phố</label>
+          <input type="text" id="address-city" class="form-control" placeholder="Nhập tỉnh/thành phố (tùy chọn)">
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng Ký</button>
+      </form>
+      <a class="toggle-link" onclick="toggleForm('login')">Đã có tài khoản? Đăng nhập</a>
+    </div>
+  </div>
+<script>
+    function toggleForm(formToShow) {
+      const loginForm = document.getElementById('login-form');
+      const registerForm = document.getElementById('register-form');
+
+      if (formToShow === 'register') {
+        loginForm.classList.add('form-hidden');
+        registerForm.classList.remove('form-hidden');
+      } else {
+        registerForm.classList.add('form-hidden');
+        loginForm.classList.remove('form-hidden');
+      }
+    }
+
+    function handleLogin(event) {
+      event.preventDefault();
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('username', document.getElementById('login-email').value); // Lưu email làm username tạm thời
+      window.location.href = '/home';
+    }
+
+    function handleRegister(event) {
+      event.preventDefault();
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('username', document.getElementById('parent-name').value); // Lưu tên phụ huynh làm username
+      window.location.href = '/home';
+    }
+
+    function updateHeader() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      const authLink = document.getElementById('auth-link');
+      const userInfo = document.getElementById('user-info');
+      const usernameSpan = document.querySelector('.user-name');
+
+      if (isLoggedIn) {
+        authLink.classList.add('hidden');
+        userInfo.classList.remove('hidden');
+        usernameSpan.innerHTML = `<i class="fa fa-user"></i> ${localStorage.getItem('username') || 'Người dùng'}`;
+      } else {
+        authLink.classList.remove('hidden');
+        userInfo.classList.add('hidden');
+      }
+    }
+
+    // Kiểm tra trạng thái khi tải trang
+    document.addEventListener('DOMContentLoaded', () => {
+      updateHeader();
+    });
+  </script>

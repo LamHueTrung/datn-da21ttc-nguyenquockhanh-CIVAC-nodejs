@@ -5,6 +5,9 @@ const authenticateToken = require('../app/middleware/authenticateTokenAdmin');
 
 
 router.use('/goivacxin', sitesControllers.HomeVacxin);
+router.use('/datlichvacxin', sitesControllers.BookVaccine);
+router.use('/xacthucdanhtinh', sitesControllers.Authention);
+router.use('/thongtincanhan', sitesControllers.Profile);
 router.use('/banggia', sitesControllers.PriceList);
 router.use('/gioithieu', sitesControllers.Overview);
 router.use('/vacxin/chitiet/:slug', sitesControllers.DetailsVacxin);

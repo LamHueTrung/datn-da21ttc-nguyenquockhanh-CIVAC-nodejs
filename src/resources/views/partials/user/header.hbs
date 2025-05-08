@@ -10,10 +10,45 @@
             Đồng bằng sông Cửu Long</a></li>
       </ul>
       <ul class="header-links pull-right">
-        <li><a href="#"><i class="fa fa-user-o"></i> Đăng nhập/ Đăng ký</a></li>
-      </ul>
+          <!-- Chưa đăng nhập -->
+          <li id="auth-link" class="auth-link"><a href="/xacthucdanhtinh"><i class="fa fa-user-o"></i> Đăng nhập/ Đăng ký</a></li>
+          <!-- Đã đăng nhập -->
+          <li id="user-info" class="user-info hidden">
+            <span class="user-name"><i class="fa fa-user"></i> Nguyễn Văn A</span>
+            <a href="/thongtincanhan" style="margin-left: 10px;"><i class="fa fa-id-card"></i> Thông tin cá nhân</a>
+            <a href="#" class="logout-btn" onclick="logout()"><i class="fa fa-sign-out-alt"></i> Đăng xuất</a>
+          </li>
+        </ul>
     </div>
   </div>
   <!-- /TOP HEADER -->
 
 </header>
+<script>
+    function logout() {
+      localStorage.setItem('isLoggedIn', 'false');
+      localStorage.removeItem('username');
+      window.location.href = '/home';
+    }
+
+    function updateHeader() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      const authLink = document.getElementById('auth-link');
+      const userInfo = document.getElementById('user-info');
+      const usernameSpan = document.querySelector('.user-name');
+
+      if (isLoggedIn) {
+        authLink.classList.add('hidden');
+        userInfo.classList.remove('hidden');
+        usernameSpan.innerHTML = `<i class="fa fa-user"></i> ${localStorage.getItem('username') || 'Người dùng'}`;
+      } else {
+        authLink.classList.remove('hidden');
+        userInfo.classList.add('hidden');
+      }
+    }
+
+    // Kiểm tra trạng thái khi tải trang
+    document.addEventListener('DOMContentLoaded', () => {
+      updateHeader();
+    });
+  </script>

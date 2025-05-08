@@ -1,0 +1,378 @@
+<!-- Profile Container -->
+  <div class="profile-container">
+    <h2>Thông Tin Cá Nhân</h2>
+
+    <!-- Thông tin phụ huynh -->
+    <div class="profile-info">
+      <h3 class="section-title">Thông tin phụ huynh</h3>
+      <div id="parent-info">
+        <p><strong>Họ và tên:</strong> <span id="display-name">Chưa cập nhật</span></p>
+        <p><strong>Email:</strong> <span id="display-email">Chưa cập nhật</span></p>
+        <p><strong>Số điện thoại:</strong> <span id="display-phone">Chưa cập nhật</span></p>
+        <p><strong>Tỉnh/Thành phố:</strong> <span id="display-city">Chưa cập nhật</span></p>
+        <a href="#" class="btn-edit" onclick="showParentEditForm()">Chỉnh sửa</a>
+        <a href="#" class="btn-edit" onclick="showChangePasswordForm()">Đổi mật khẩu</a>
+      </div>
+      <!-- Form chỉnh sửa phụ huynh -->
+      <div id="parent-edit-form" class="form-hidden">
+        <form id="parent-form" onsubmit="saveParentProfile(event)">
+          <div class="form-group">
+            <label for="edit-name">Họ và tên (*)</label>
+            <input type="text" id="edit-name" class="form-control" placeholder="Nhập họ và tên" required>
+          </div>
+          <div class="form-group">
+            <label for="edit-phone">Số điện thoại (*)</label>
+            <input type="tel" id="edit-phone" class="form-control" placeholder="Nhập số điện thoại" pattern="[0-9]{10}" required>
+          </div>
+          <div class="form-group">
+            <label for="edit-city">Tỉnh/Thành phố</label>
+            <input type="text" id="edit-city" class="form-control" placeholder="Nhập tỉnh/thành phố (tùy chọn)">
+          </div>
+          <button type="submit" class="btn-primary">Lưu</button>
+        </form>
+      </div>
+      <!-- Form đổi mật khẩu -->
+      <div id="change-password-form" class="form-hidden">
+        <form id="password-form" onsubmit="changePassword(event)">
+          <div class="form-group">
+            <label for="old-password">Mật khẩu cũ (*)</label>
+            <input type="password" id="old-password" class="form-control" placeholder="Nhập mật khẩu cũ" required>
+          </div>
+          <div class="form-group">
+            <label for="new-password">Mật khẩu mới (*)</label>
+            <input type="password" id="new-password" class="form-control" placeholder="Nhập mật khẩu mới" required>
+          </div>
+          <button type="submit" class="btn-primary">Đổi mật khẩu</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Danh sách trẻ -->
+    <div class="children-list">
+      <h3 class="section-title">Danh sách trẻ</h3>
+      <a href="#" class="btn-add mb-2" onclick="showAddChildForm()">Thêm trẻ</a>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Họ và tên</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="children-table"></tbody>
+      </table>
+      <!-- Modal thêm trẻ -->
+      <div id="add-child-modal" class="modal">
+        <div class="modal-content">
+          <h3>Thêm trẻ mới</h3>
+          <form id="child-form" onsubmit="addChild(event)">
+            <div class="form-group">
+              <label for="child-name">Họ và tên trẻ (*)</label>
+              <input type="text" id="child-name" class="form-control" placeholder="Nhập họ và tên trẻ" required>
+            </div>
+            <div class="form-group">
+              <label for="child-dob">Ngày sinh trẻ (*)</label>
+              <input type="date" id="child-dob" class="form-control" max="" required>
+            </div>
+            <div class="form-group">
+              <label for="child-gender">Giới tính trẻ</label>
+              <select id="child-gender" class="form-control">
+                <option value="" selected>Chọn giới tính (tùy chọn)</option>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+              </select>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn btn-cancel" onclick="closeAddChildModal()">Hủy</button>
+              <button type="submit" class="btn btn-primary">Thêm</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Form chỉnh sửa trẻ -->
+      <div id="edit-child-form" class="form-hidden">
+        <form id="edit-child-form-element" onsubmit="updateChild(event)">
+          <input type="hidden" id="edit-child-id">
+          <div class="form-group">
+            <label for="edit-child-name">Họ và tên trẻ (*)</label>
+            <input type="text" id="edit-child-name" class="form-control" placeholder="Nhập họ và tên trẻ" required>
+          </div>
+          <div class="form-group">
+            <label for="edit-child-dob">Ngày sinh trẻ (*)</label>
+            <input type="date" id="edit-child-dob" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="edit-child-gender">Giới tính trẻ</label>
+            <select id="edit-child-gender" class="form-control">
+              <option value="" selected>Chọn giới tính (tùy chọn)</option>
+              <option value="male">Nam</option>
+              <option value="female">Nữ</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary">Lưu</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Lịch sử tiêm chủng -->
+    <div class="vaccination-history">
+      <h3 class="section-title">Lịch sử tiêm chủng</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tên trẻ</th>
+            <th>Loại vắc-xin</th>
+            <th>Ngày tiêm</th>
+            <th>Cơ sở tiêm</th>
+          </tr>
+        </thead>
+        <tbody id="vaccination-table"></tbody>
+      </table>
+    </div>
+
+    <!-- Modal xác nhận -->
+    <div id="confirm-modal" class="modal">
+      <div class="modal-content">
+        <h3>Xác nhận</h3>
+        <p id="confirm-message"></p>
+        <button class="btn btn-confirm" onclick="confirmAction()">Xác nhận</button>
+        <button class="btn btn-cancel" onclick="closeModal()">Hủy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Profile Script -->
+  <script>
+    let confirmCallback = null;
+
+    function logout() {
+      localStorage.setItem('isLoggedIn', 'false');
+      localStorage.removeItem('username');
+      localStorage.removeItem('profile');
+      localStorage.removeItem('children');
+      window.location.href = '/xacthucdanhtinh';
+    }
+
+    function updateHeader() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      const authLink = document.getElementById('auth-link');
+      const userInfo = document.getElementById('user-info');
+      const usernameSpan = document.querySelector('.user-name');
+
+      if (isLoggedIn) {
+        authLink.classList.add('hidden');
+        userInfo.classList.remove('hidden');
+        usernameSpan.innerHTML = `<i class="fa fa-user"></i> ${localStorage.getItem('username') || 'Người dùng'}`;
+      } else {
+        authLink.classList.remove('hidden');
+        userInfo.classList.add('hidden');
+      }
+    }
+
+    function loadParentProfile() {
+      const profile = JSON.parse(localStorage.getItem('profile') || '{}');
+      document.getElementById('display-name').textContent = profile.name || 'Chưa cập nhật';
+      document.getElementById('display-email').textContent = profile.email || 'Chưa cập nhật';
+      document.getElementById('display-phone').textContent = profile.phone || 'Chưa cập nhật';
+      document.getElementById('display-city').textContent = profile.city || 'Chưa cập nhật';
+
+      document.getElementById('edit-name').value = profile.name || '';
+      document.getElementById('edit-phone').value = profile.phone || '';
+      document.getElementById('edit-city').value = profile.city || '';
+    }
+
+    function showParentEditForm() {
+      document.getElementById('parent-info').classList.add('form-hidden');
+      document.getElementById('parent-edit-form').classList.remove('form-hidden');
+      document.getElementById('change-password-form').classList.add('form-hidden');
+    }
+
+    function showChangePasswordForm() {
+      document.getElementById('parent-info').classList.add('form-hidden');
+      document.getElementById('parent-edit-form').classList.add('form-hidden');
+      document.getElementById('change-password-form').classList.remove('form-hidden');
+    }
+
+    function saveParentProfile(event) {
+      event.preventDefault();
+      const profile = {
+        name: document.getElementById('edit-name').value,
+        email: localStorage.getItem('profile') ? JSON.parse(localStorage.getItem('profile')).email : 'Chưa cập nhật',
+        phone: document.getElementById('edit-phone').value,
+        city: document.getElementById('edit-city').value
+      };
+      localStorage.setItem('profile', JSON.stringify(profile));
+      localStorage.setItem('username', profile.name || profile.email);
+      document.getElementById('parent-info').classList.remove('form-hidden');
+      document.getElementById('parent-edit-form').classList.add('form-hidden');
+      loadParentProfile();
+      updateHeader();
+    }
+
+    function changePassword(event) {
+      event.preventDefault();
+      Swal.fire({
+        title: 'Thành công',
+        text: 'Mật khẩu đã được thay đổi thành công!',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#e63946'
+      });
+      document.getElementById('parent-info').classList.remove('form-hidden');
+      document.getElementById('change-password-form').classList.add('form-hidden');
+      document.getElementById('old-password').value = '';
+      document.getElementById('new-password').value = '';
+    }
+
+    function loadChildren() {
+      const children = JSON.parse(localStorage.getItem('children') || '[]');
+      const tbody = document.getElementById('children-table');
+      tbody.innerHTML = '';
+      children.forEach(child => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${child.name}</td>
+          <td>${child.dob}</td>
+          <td>${child.gender || 'Chưa cập nhật'}</td>
+          <td>
+            <a href="#" class="btn-edit" onclick="showEditChildForm('${child.id}')">Sửa</a>
+            <a href="#" class="btn-delete" onclick="confirmDeleteChild('${child.id}')">Xóa</a>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+      loadVaccinationHistory();
+    }
+
+    function showAddChildForm() {
+      document.getElementById('add-child-modal').style.display = 'flex';
+      document.getElementById('edit-child-form').classList.add('form-hidden');
+      document.getElementById('child-name').value = '';
+      document.getElementById('child-dob').value = '';
+      document.getElementById('child-gender').value = '';
+      setMaxDate();
+    }
+
+    function closeAddChildModal() {
+      document.getElementById('add-child-modal').style.display = 'none';
+    }
+
+    function addChild(event) {
+      event.preventDefault();
+      const children = JSON.parse(localStorage.getItem('children') || '[]');
+      const newChild = {
+        id: Date.now().toString(),
+        name: document.getElementById('child-name').value,
+        dob: document.getElementById('child-dob').value,
+        gender: document.getElementById('child-gender').value
+      };
+      children.push(newChild);
+      localStorage.setItem('children', JSON.stringify(children));
+      closeAddChildModal();
+      loadChildren();
+      Swal.fire({
+        title: 'Thành công',
+        text: 'Đã thêm trẻ thành công!',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#e63946'
+      });
+    }
+
+    function setMaxDate() {
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('child-dob').setAttribute('max', today);
+    }
+
+    function showEditChildForm(id) {
+      const children = JSON.parse(localStorage.getItem('children') || '[]');
+      const child = children.find(c => c.id === id);
+      if (child) {
+        document.getElementById('edit-child-form').classList.remove('form-hidden');
+        document.getElementById('add-child-modal').style.display = 'none';
+        document.getElementById('edit-child-id').value = child.id;
+        document.getElementById('edit-child-name').value = child.name;
+        document.getElementById('edit-child-dob').value = child.dob;
+        document.getElementById('edit-child-gender').value = child.gender || '';
+      }
+    }
+
+    function updateChild(event) {
+      event.preventDefault();
+      const id = document.getElementById('edit-child-id').value;
+      const children = JSON.parse(localStorage.getItem('children') || '[]');
+      const index = children.findIndex(c => c.id === id);
+      if (index !== -1) {
+        children[index] = {
+          id,
+          name: document.getElementById('edit-child-name').value,
+          dob: document.getElementById('edit-child-dob').value,
+          gender: document.getElementById('edit-child-gender').value
+        };
+        localStorage.setItem('children', JSON.stringify(children));
+        document.getElementById('edit-child-form').classList.add('form-hidden');
+        loadChildren();
+      }
+    }
+
+    function confirmDeleteChild(id) {
+      showModal('Bạn có chắc chắn muốn xóa trẻ này?', () => {
+        const children = JSON.parse(localStorage.getItem('children') || '[]');
+        const updatedChildren = children.filter(c => c.id !== id);
+        localStorage.setItem('children', JSON.stringify(updatedChildren));
+        loadChildren();
+      });
+    }
+
+    function loadVaccinationHistory() {
+      const children = JSON.parse(localStorage.getItem('children') || '[]');
+      const sampleHistory = [
+        { childId: children[0]?.id || '1', vaccine: '5 trong 1', date: '2025-01-15', facility: 'VNVC Hà Nội' },
+        { childId: children[0]?.id || '1', vaccine: 'Sởi', date: '2025-02-20', facility: 'Vinmec TP.HCM' }
+      ];
+      const tbody = document.getElementById('vaccination-table');
+      tbody.innerHTML = '';
+      sampleHistory.forEach(record => {
+        const child = children.find(c => c.id === record.childId);
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${child ? child.name : 'Không xác định'}</td>
+          <td>${record.vaccine}</td>
+          <td>${record.date}</td>
+          <td>${record.facility}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    function showModal(message, callback) {
+      document.getElementById('confirm-message').textContent = message;
+      document.getElementById('confirm-modal').style.display = 'flex';
+      confirmCallback = callback;
+    }
+
+    function closeModal() {
+      document.getElementById('confirm-modal').style.display = 'none';
+      confirmCallback = null;
+    }
+
+    function confirmAction() {
+      if (confirmCallback) {
+        confirmCallback();
+        closeModal();
+      }
+    }
+
+    // Kiểm tra trạng thái khi tải trang
+    document.addEventListener('DOMContentLoaded', () => {
+      updateHeader();
+      loadParentProfile();
+      loadChildren();
+    });
+  </script>
